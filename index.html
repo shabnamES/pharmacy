@@ -12,7 +12,7 @@
 <body id="body">
     <!--start menu-->
     <div id="mainMenu"
-        class="bg-stone-100 flex fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-xl shadow-stone-400">
+        class="bg-stone-100 flex sticky w-full z-20 top-0 start-0 border-b border-gray-200 shadow-xl shadow-stone-400">
         <div class="flex items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="./pics/images_prev_ui.png" class="h-20" alt="">
@@ -47,14 +47,16 @@
                             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     </svg>
                 </button>
-                <button>
+                <a href="#" class="flex ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
-
-                </button>
+                    <span class="-mt-4 text-red-500" id="counterOrder">
+                        
+                    </span>
+                </a>
 
             </div>
         </div>
@@ -62,14 +64,8 @@
     </div>
     <!--close menu-->
     <!--intro-->
-    <div id="intro" class="">
-        <img src="./pics/4110163792023-281-supplement.jpg" class="" alt="">
-
-    </div>
-    <!--close intro-->
-    <!--cards-->
-    <div id="cards" class="grid-rows-3 justify-center flex gap-4 text-white font-bold ">
-
+  <img src="./pics/download.jpg " class="w-full" alt="">
+    <div id="cards" class="grid-rows-3 justify-center flex gap-4 text-white font-bold -mt-10 ">
         <a href="" class="bg-yellow-400 shadow hover:bg-yellow-500 border rounded-lg items-center p-4 shadow-md ">
             <h5>باشگاه مشتریان</h5>
             <p>خدمات و تخفیفات ویژه</p>
@@ -84,19 +80,23 @@
         </a>
 
     </div>
+    <!--close intro-->
+    <!--cards-->
+    
     <!--end cards-->
     <div class="flex justify-center">
         <h2 class="items-center p-4 font-bold">پرفروش ترین ها</h2>
     </div>
-    <div class="flex justify-center grid grid-cols-3 gap-4 p-4  items-center">
+    <div class="grid  grid-cols-1 md:grid-cols-3 p-4  justify-items-center  gap-4 ">
         <div class="">
             <a href="">
                 <img src="./pics/product_01.png" alt="">
             </a>
             <div class="">
                 <h5>نام محصول</h5>
-                <p>قیمت</p>
-                <button> افزودن به سبد خرید</button>
+                <p class="line-through text-red-500">15000000</p>
+                <p class="text-green-500">14000000</p>
+                <button class="bg-purple-300 p-2 rounded-lg" id="prod_1"> افزودن به سبد خرید</button>
             </div>
         </div>
         <div>
@@ -190,6 +190,8 @@
         let loaderCss = document.getElementById('loaderCss')
         let drugMenu = document.getElementById('drugMenu')
         let ithemDrugMenu = document.getElementById('ithemDrugMenu')
+        let prod_1 =  document.getElementById('prod_1')
+        let counterOrder = document.getElementById('counterOrder')
         window.addEventListener('load', function () {
             loaderCss.classList.add("hidden");
         })
@@ -205,6 +207,9 @@
         window.addEventListener("scroll", ()=>{
             ithemDrugMenu.classList.add("hidden")
         });
+        prod_1.addEventListener("click" , ()=>{
+            counterOrder.textContent= 10;
+        })
     
     </script>
     <style>
