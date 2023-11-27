@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,36 +8,52 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+
+<body id="body">
     <!--start menu-->
-    <div id="mainMenu" class="bg-stone-100 flex fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-xl shadow-stone-400">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div id="mainMenu"
+        class="bg-stone-100 flex fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-xl shadow-stone-400">
+        <div class="flex items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="./pics/images_prev_ui.png" class="h-20" alt="">
                 <span class=" flex self-center text-2xl  w ">فارماکر</span>
             </a>
-            
+
             <div>
                 <ul class="flex  p-4 mt-4 space-x-8 space-x-reverse  ">
                     <li>خانه</li>
-                    <li>داروها</li>
+                    <li>
+                        <a href="#" id="drugMenu">داروها</a>
+                        <div id="ithemDrugMenu" class="absolute  w-96 mt-4 bg-purple-300 p-2 rounded-lg hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque illo repellendus pariatur
+                            vero porro commodi labore autem dicta eligendi necessitatibus officiis, fuga iusto iste
+                            placeat quis corporis numquam laborum ducimus!
+                        </div>
+                    </li>
+
+
+
                     <li>مکمل های ورزشی</li>
                     <li>تجهیزات پزشکی</li>
                     <li> آرایشی و بهداشتی</li>
                     <li>تازه ها</li>
                 </ul>
             </div>
-           <div class="flex">
+            <div class="flex">
                 <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6 ">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
                 </button>
                 <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                      </svg>
-                      
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+
                 </button>
 
             </div>
@@ -53,7 +69,7 @@
     <!--close intro-->
     <!--cards-->
     <div id="cards" class="grid-rows-3 justify-center flex gap-4 text-white font-bold ">
-        
+
         <a href="" class="bg-yellow-400 shadow hover:bg-yellow-500 border rounded-lg items-center p-4 shadow-md ">
             <h5>باشگاه مشتریان</h5>
             <p>خدمات و تخفیفات ویژه</p>
@@ -68,79 +84,305 @@
         </a>
 
     </div>
-     <!--end cards-->
-     <div class="flex justify-center">
+    <!--end cards-->
+    <div class="flex justify-center">
         <h2 class="items-center p-4 font-bold">پرفروش ترین ها</h2>
-     </div>
-     <div class="flex justify-center grid grid-cols-3 gap-4 p-4  items-center">
-       <div class="">
-        <a href="">
-            <img src="./pics/product_01.png" alt="">   
-        </a>
+    </div>
+    <div class="flex justify-center grid grid-cols-3 gap-4 p-4  items-center">
         <div class="">
-            <h5>نام محصول</h5>
-            <p>قیمت</p>
-            <button> افزودن به سبد خرید</button>
+            <a href="">
+                <img src="./pics/product_01.png" alt="">
+            </a>
+            <div class="">
+                <h5>نام محصول</h5>
+                <p>قیمت</p>
+                <button> افزودن به سبد خرید</button>
+            </div>
         </div>
-       </div>
-       <div>
-        <a href="">
-            <img src="./pics/product_02.png" alt="">   
-        </a>
         <div>
-            <h5>نام محصول</h5>
-            <p>قیمت</p>
-            <button>افزودن به سبد خرید</button>
+            <a href="">
+                <img src="./pics/product_02.png" alt="">
+            </a>
+            <div>
+                <h5>نام محصول</h5>
+                <p>قیمت</p>
+                <button>افزودن به سبد خرید</button>
+            </div>
         </div>
-       </div>
-       <div>
-        <a href="">
-            <img src="./pics/product_03.png" alt="">   
-        </a>
         <div>
-            <h5>نام محصول</h5>
-            <p>قیمت</p>
-            <button>افزودن به سبد خرید</button>
+            <a href="">
+                <img src="./pics/product_03.png" alt="">
+            </a>
+            <div>
+                <h5>نام محصول</h5>
+                <p>قیمت</p>
+                <button>افزودن به سبد خرید</button>
+            </div>
         </div>
-       </div>
-       <div>
-        <a href="">
-            <img src="./pics/product_04.png" alt="">   
-        </a>
         <div>
-            <h5>نام محصول</h5>
-            <p>قیمت</p>
-            <button>افزودن به سبد خرید</button>
+            <a href="">
+                <img src="./pics/product_04.png" alt="">
+            </a>
+            <div>
+                <h5>نام محصول</h5>
+                <p>قیمت</p>
+                <button>افزودن به سبد خرید</button>
+            </div>
         </div>
-       </div>
-       <div>
-        <a href="">
-            <img src="./pics/product_05.png" alt="">   
-        </a>
         <div>
-            <h5>نام محصول </h5>
-            <p>قیمت</p>
-            <button>افزودن به سبد خرید</button>
+            <a href="">
+                <img src="./pics/product_05.png" alt="">
+            </a>
+            <div>
+                <h5>نام محصول </h5>
+                <p>قیمت</p>
+                <button>افزودن به سبد خرید</button>
+            </div>
         </div>
-       </div>
-       <div>
-        <a href="">
-            <img src="./pics/product_06.png" alt="">   
-        </a>
         <div>
-            <h5>نام محصول</h5>
-            <p>قیمت</p>
-            <button>افزودن به سبد خرید</button>
+            <a href="">
+                <img src="./pics/product_06.png" alt="">
+            </a>
+            <div>
+                <h5>نام محصول</h5>
+                <p>قیمت</p>
+                <button>افزودن به سبد خرید</button>
+            </div>
         </div>
-       </div>
-       
-        
 
-     </div>
-     
 
 
- 
+    </div>
+
+    <img src="./pics/254.jpg" alt="">
+
+
+    <div id="loaderCss"
+        class="fixed flex justify-center items-center bg-gray-900  top-0 left-0 w-full h-full bg-opacity-40 z-50  hidden">
+        <div class="preloader">
+            <svg class="cart" role="img" aria-label="Shopping cart line animation" viewBox="0 0 128 128" width="128px"
+                height="128px" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                    <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
+                        <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" />
+                        <circle cx="43" cy="111" r="13" />
+                        <circle cx="102" cy="111" r="13" />
+                    </g>
+                    <g class="cart__lines" stroke="currentColor">
+                        <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"
+                            stroke-dasharray="338 338" stroke-dashoffset="-338" />
+                        <g class="cart__wheel1" transform="rotate(-90,43,111)">
+                            <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                                stroke-dashoffset="81.68" />
+                        </g>
+                        <g class="cart__wheel2" transform="rotate(90,102,111)">
+                            <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                                stroke-dashoffset="81.68" />
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+
+    <script>
+        let loaderCss = document.getElementById('loaderCss')
+        let drugMenu = document.getElementById('drugMenu')
+        let ithemDrugMenu = document.getElementById('ithemDrugMenu')
+        window.addEventListener('load', function () {
+            loaderCss.classList.add("hidden");
+        })
+        drugMenu.addEventListener("click", () => {
+            if (ithemDrugMenu.classList.contains('hidden')) {
+                console.log('Class exists!');
+                ithemDrugMenu.classList.remove("hidden")
+            } else {
+                console.log('Class not found.')
+                ithemDrugMenu.classList.add("hidden")
+            }
+        });
+        window.addEventListener("scroll", ()=>{
+            ithemDrugMenu.classList.add("hidden")
+        });
+    
+    </script>
+    <style>
+        * {
+            border: 0;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --hue: 223;
+            --bg: hsl(var(--hue), 10%, 90%);
+            --fg: hsl(var(--hue), 10%, 10%);
+            --primary: hsl(var(--hue), 90%, 55%);
+            --trans-dur: 0.3s;
+            font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+        }
+
+        .preloader {
+            text-align: center;
+            max-width: 20em;
+            width: 100%;
+        }
+
+        .preloader__text {
+            position: relative;
+            height: 1.5em;
+        }
+
+        .preloader__msg {
+            animation: msg 0.3s 13.7s linear forwards;
+            position: absolute;
+            width: 100%;
+        }
+
+        .preloader__msg--last {
+            animation-direction: reverse;
+            animation-delay: 14s;
+            visibility: hidden;
+        }
+
+        .cart {
+            display: block;
+            margin: 0 auto 1.5em auto;
+            width: 8em;
+            height: 8em;
+        }
+
+        .cart__lines,
+        .cart__top,
+        .cart__wheel1,
+        .cart__wheel2,
+        .cart__wheel-stroke {
+            animation: cartLines 2s ease-in-out infinite;
+        }
+
+        .cart__lines {
+            stroke: var(--primary);
+        }
+
+        .cart__top {
+            animation-name: cartTop;
+        }
+
+        .cart__wheel1 {
+            animation-name: cartWheel1;
+            transform: rotate(-0.25turn);
+            transform-origin: 43px 111px;
+        }
+
+        .cart__wheel2 {
+            animation-name: cartWheel2;
+            transform: rotate(0.25turn);
+            transform-origin: 102px 111px;
+        }
+
+        .cart__wheel-stroke {
+            animation-name: cartWheelStroke
+        }
+
+        .cart__track {
+            stroke: hsla(var(--hue), 10%, 10%, 0.1);
+            transition: stroke var(--trans-dur);
+        }
+
+        /* Dark theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: hsl(var(--hue), 10%, 10%);
+                --fg: hsl(var(--hue), 10%, 90%);
+            }
+
+            .cart__track {
+                stroke: hsla(var(--hue), 10%, 90%, 0.1);
+            }
+        }
+
+        /* Animations */
+        @keyframes msg {
+            from {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            99.9% {
+                opacity: 0;
+                visibility: visible;
+            }
+
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes cartLines {
+
+            from,
+            to {
+                opacity: 0;
+            }
+
+            8%,
+            92% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes cartTop {
+            from {
+                stroke-dashoffset: -338;
+            }
+
+            50% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: 338;
+            }
+        }
+
+        @keyframes cartWheel1 {
+            from {
+                transform: rotate(-0.25turn);
+            }
+
+            to {
+                transform: rotate(2.75turn);
+            }
+        }
+
+        @keyframes cartWheel2 {
+            from {
+                transform: rotate(0.25turn);
+            }
+
+            to {
+                transform: rotate(3.25turn);
+            }
+        }
+
+        @keyframes cartWheelStroke {
+
+            from,
+            to {
+                stroke-dashoffset: 81.68;
+            }
+
+            50% {
+                stroke-dashoffset: 40.84;
+            }
+        }
+    </style>
+
+
 
 </body>
+
 </html>
